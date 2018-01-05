@@ -48,8 +48,8 @@ class SeleniumProtocol(Protocol):
 
         session_started = False
         try:
-            self.logger.warning("~~~~~~~~~~~~url:\n%s", % self.url)
-            self.logger.warning("~~~~~~~~~~~~capabilities:\n%s", % self.capabilities)
+            self.logger.warning("~~~~~~~~~~~~url:\n%s" % self.url)
+            self.logger.warning("~~~~~~~~~~~~capabilities:\n%s" % self.capabilities)
             self.webdriver = webdriver.Remote(command_executor=RemoteConnection(self.url.strip("/"),
                                                                                 resolve_ip=False),
                                               desired_capabilities=self.capabilities)
